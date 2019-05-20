@@ -23,7 +23,7 @@ For estimating the break points, first we decompose the signal into Independent 
 The mixture ICA estimator used for this thesis is AMICA, which can be downloaded [here](https://sccn.ucsd.edu/~jason/amica_web.html). It can be run from EEGLAB directly, which is useful. For replication of the large-scale simulation study in this thesis, relying on the EEGLAB-GUI of AMICA is not recommended.
 
 #### Univariate Break Detection
-To estimate the break points in the AMICA model probabilities, univariate break detection as proposed [here]() is used. This method is implemented in a toolbox named 'm_break' which can be downloaded [here](http://people.bu.edu/perron/code/m-break-matlab.zip). For more implementations of break detection, look [here](http://people.bu.edu/perron/code.html).
+To estimate the break points in the AMICA model probabilities, univariate break detection as proposed [here](https://www.jstor.org/stable/pdf/2998540.pdf) is used (Bai-Perron test). This method is implemented in a toolbox named 'm_break' which can be downloaded [here](http://people.bu.edu/perron/code/m-break-matlab.zip). For more implementations of break detection, look [here](http://people.bu.edu/perron/code.html).
 
 ### Further dependencies
 Some of these toolboxes come with their own dependencies, which may or may not already be installed in your version of Matlab. Consult the documentation for each of these toolboxes if something is not working, the solution should lie there.
