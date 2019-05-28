@@ -14,7 +14,7 @@ Event Related Potentials are small 'bumps' of electrical activity distributed ov
 The EEG is contaminated by many artefacts from many different and unknown sources. However, it is observed the frequency spectrum of the EEG is often the same. Therefore, simulating realistic EEG noise tries to replicate this frequency spectrum. A simulation procedure by Yeung, Bogacz, Holroyd, Nieuwenhuis & Cohen simulates the noise by adding 50 random-phase sinusoids together. Their procedure can be downloaded [here](https://data.mrc.ox.ac.uk/data-set/simulated-eeg-data-generator).
 
 #### EEGLAB
-For handling the data, the standard Matlab package EEGLAB is used in this thesis. The method for structural break detection also critically relies on EEGLAB. EEGLAB can be downloaded [here](https://sccn.ucsd.edu/eeglab/download.php).
+For handling the data, the standard Matlab package [EEGLAB](https://sccn.ucsd.edu/eeglab/download.php) is used. 
 
 ### Estimating the break points
 For estimating the break points, first we decompose the signal into Independent Component Analysis (ICA) models. However, one ICA is not sufficient since there is a structural break: The EEG over the full experiment is a mixture of two ICA models. Therefore, we use Adaptive Mixture Independent Component Analysis (AMICA), which estimates different ICA models for self-similar parts of the data. AMICA returns the ICA models, but critically also the probabilities of each estimated ICA model being active over time. Structural Break detection can be applied to this timeseries of model probabilities.
